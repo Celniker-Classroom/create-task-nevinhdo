@@ -1,13 +1,47 @@
+<!-- I will be creating a hangman game where the player will guess leters and the hangman image will update. The player will be notified when they are correct or wrong, the wrong guesses will be displayed in the box below, and there will be a personal record, score tracker, and words inputed from a scrabble library or something. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        p{
+            margin-top: 20px;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Home</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Your html goes here...</h1>
-    <br>See the <a href="README.md">README</a> for project details
+    <h1>
+        Hangman Game</h1>
+    <p1>
+        (placeholder will delete later) Insert hangman image here:
+        <br>
+        <img src = https://t4.ftcdn.net/jpg/05/17/38/33/360_F_517383341_8nWEFfM1KL3K5LNTjUDrne3x0kZiuxuj.jpg alt = "hangman image" id = "hangmanImage">
+
+    </p1>
+</body>
+
+<form id="guessButton">
+<!--Box to enter a letter guess-->
+  <input type="text" id="myInput" placeholder="Type something here...">
+<!--Button to submit letter guess-->
+  <button type="submit" id="myButton">Enter</button>
+</form>
+
+
+
+
+<body>
+<div class = "myBox">
+    <h2> Letter Guesses </h2>
+    <p class="letters">
+        A B C D E F G ...
+    </p>
+</div>
+
 </body>
 </html>
