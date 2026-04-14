@@ -1,16 +1,22 @@
 /* Add Global styles here */
 .letters{
-    font-family: Arial;
+    font-family: Arial, 'Courier New', Courier, monospace;
     font-size: 30px;
     color: #000000;
     margin-top: 14px;
 }
 
 body h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    color: #333333;
     margin-left: 15px;
 }
 
 body p1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #555555;
     margin-left: 15px;
     margin-top: 20px;
 }
@@ -46,3 +52,13 @@ body p1 {
 #myInput {
     width: 150px;
 }
+
+.answer {
+     width: 5cm;
+    height: 2cm;
+    border: 2px solid #333;
+    padding: 5px;
+    margin: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 30px; }
