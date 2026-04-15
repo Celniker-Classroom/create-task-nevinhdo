@@ -1,4 +1,4 @@
-<!-- I will be creating a hangman game where the player will guess leters and the hangman image will update. The player will be notified when they are correct or wrong, the wrong guesses will be displayed in the box below, and there will be a personal record, score tracker, and words inputed from a scrabble library or something. -->
+<!-- I will be creating a Math quiz with a list of questions and randomly chooses 5 of the questions -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,44 +16,20 @@
 
 <body>
     <h1>
-        Hangman Game</h1>
-    <p1>
-        (placeholder will delete later) Insert hangman image here:
-        <br>
-        <img src = https://t4.ftcdn.net/jpg/05/17/38/33/360_F_517383341_8nWEFfM1KL3K5LNTjUDrne3x0kZiuxuj.jpg alt = "hangman image" id = "hangmanImage">
-
-    </p1>
-</body>
-
-<form id="guessButton">
-<!--Box to enter a letter guess-->
-  <input type="text" id="myInput" placeholder="Guess a letter here...">
-<!--Button to submit letter guess-->
-  <button type="submit" id="myButton">Enter</button>
-</form>
-
-
-
-
-<body>
-<div class = "myBox">
-    <h2> Letter Guesses </h2>
-    <p class="letters">
-        A B C D E F G ...
+        Math Quiz</h1>
+    <p>
+        This is the Math Quiz! You will be given 5 random questions to answer. Good luck!
     </p>
-</div>
+    <form id="guessButton">
+      <input type="text" id="myInput" placeholder="Guess a letter here...">
+      <button type="submit" id="myButton">Enter</button>
+    </form>
 
-</body>
-
-<body>
-    <div class = "answer" style = "margin-left: .35cm;">
-        <button onclick="revealWord()" id="randomWordButton" style="margin-bottom: 3px; margin-top: 10px; margin-left: 1.0cm">Reveal Word</button>
-         <p id="randomword" style=" display:block; margin-top: 1px; margin-left: 1.0cm"></p>
+    <div class="myBox">
+        <h2> Question </h2>
+        <p class="Question" id="questionText">
+            randQuestion
+        </p>
     </div>
 
-
-
 </body>
-
-</html>
-

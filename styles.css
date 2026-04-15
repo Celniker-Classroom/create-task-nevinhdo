@@ -1,5 +1,5 @@
 /* Add Global styles here */
-.letters{
+.question{
     font-family: Arial, 'Courier New', Courier, monospace;
     font-size: 30px;
     color: #000000;
@@ -53,12 +53,3 @@ body p1 {
     width: 150px;
 }
 
-.answer {
-     width: 5cm;
-    height: 2cm;
-    border: 2px solid #333;
-    padding: 5px;
-    margin: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-top: 30px; }
