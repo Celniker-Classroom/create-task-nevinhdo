@@ -2,7 +2,7 @@
 let randQuestion = "";
 let questionCount = 0;
 let userAnswers = [];
-
+let correspondingAnswer = [];
 //creating lists
 const questionlist = ["What is 2 + 3?", "What is 5 + 4?", "What is 10 - 3?", "What is 8 - 2?", "What is 3 x 4?", "What is 5/1?", "What is 15/3?", "What is 2 x 4?", "What is 25/5?", "What is 9 - 8?"];
 const answerlist = ["5", "9", "7", "6", "12", "5", "5", "8", "5", "1"];
@@ -10,7 +10,8 @@ const answerlist = ["5", "9", "7", "6", "12", "5", "5", "8", "5", "1"];
 //loading questions
 function loadQuestion() {
     if (questionCount < 5) {
-        randQuestion = questionlist[questionCount];
+        randQuestion = questionlist[Math.floor(Math.random() * questionlist.length)];
+        correspondingAnswer.push(randQuestion);
         document.getElementById("questionText").innerText = randQuestion;
     }
 }
@@ -32,16 +33,18 @@ function checkAnswer(userAnswer) {
     }
 }
 
+
 //checking all answers at the end
 function checkAll(answers) {
     let correct = 0;
     for (let i = 0; i < answers.length; i++) {
-        if (answers[i] === answerlist[i]) {
+        if (answers[i] === answerlist[questionlist.indexOf(correspondingAnswer[i])]) {
             correct++;
         }
     }
     return correct;
 }
+
 
 //initializing quiz
 loadQuestion();

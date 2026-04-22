@@ -11,21 +11,44 @@
 
 <body>
     <h1>
-        Math Quiz</h1>
+        Quiz Game!
+    </h1>
+
     <p>
-        This is the Math Quiz! You will be given 5 random questions to answer. Good luck!
+        This is the Quiz Game! You will be given 5 random questions to answer. Good luck!
     </p>
-    <form id="guessButton">
-      <input type="text" id="myInput" placeholder="Guess here... ">
-      <button type="submit" id="myButton">Enter</button>
+
+
+
+<div style="display: flex; gap : 0.03cm">
+     <form id="categoryButton">
+      <button type="submit" id="mathButton">Math</button>
+
     </form>
+       <form id="categoryButton">
+      <button type="submit" id="historyButton">History</button>
+    </form>
+
+      </form>
+       <form id="categoryButton">
+      <button type="submit" id="funButton">Fun</button>
+    </form>
+</div>
+
+
 
     <div class="myBox">
         <h2> Question </h2>
-        <p id="score">Questions answered: 0/5;</p>
         <p class="question" id="questionText">
             Loading question...
         </p>
+
+   <form id="guessButton">
+      <input type="text" id="myInput" placeholder="Answer here...">
+      <button type="submit" id="myButton">Enter</button>
+    </form>
+
+
     </div>
 
 </body>
