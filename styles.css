@@ -41,6 +41,7 @@ p {
 
 #score {
     font-size: 26px;
+    font-weight: bold;
 }
 
 #quizScreen {
@@ -77,6 +78,9 @@ p {
     color: white;
     font-family: Arial, sans-serif;
     font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #startButton:hover {
@@ -84,6 +88,41 @@ p {
     transform: scale(1.03);
 }
 
+/*  Timer  */
+#timerWrapper {
+    width: 80%;
+    margin: 0 auto 8px auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+#timerDisplay {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    min-width: 42px;
+    text-align: right;
+    transition: color 0.4s;
+}
+
+#timerTrack {
+    flex: 1;
+    height: 14px;
+    background-color: #e0e0e0;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+#timerBar {
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+    background-color: #2a9d8f;
+    transition: width 0.9s linear, background-color 0.4s;
+}
+
+/*  Choices   */
 #choicesContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -106,7 +145,6 @@ p {
     text-align: center;
 }
 
-
 .choiceBtn:hover {
     opacity: 0.85;
     transform: scale(1.03);
@@ -116,7 +154,7 @@ p {
     transform: scale(0.97);
 }
 
-/* category screen */
+/*  Category screen   */
 #categoryScreen {
     width: 95%;
 }
@@ -171,7 +209,7 @@ p {
 #videogamesCard button  { background-color: #f77f00; }
 #animalsCard button     { background-color: #4a7c59; }
 
-/* results */
+/*  Results   */
 #resultsContainer {
     text-align: center;
     width: 80%;
@@ -213,11 +251,11 @@ p {
     color: white;
 }
 
-/* hiding screens */
+/* hide unused */
 #startScreen { display: none; }
 #quizScreen  { display: none; }
 
-
+/*  Play Again  */
 .playAgainBtn {
     margin-top: 20px;
     padding: 18px 40px;

@@ -9,68 +9,74 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body>
-    <h1 style="margin-bottom: 2cm;">
-        Quiz Game</h1>
+    <h1 style="margin-bottom: 2cm;">Quiz Game</h1>
 
     <!-- category select screen -->
-    <div id = "categoryScreen">
-    <p style="margin-left: 15px;">
-        Select a mode to begin!
-    <br>
-    </p>
-    <div id = "categoryButtons">
-        <div class = "categoryCard" id = "sportsCard">
-            <button id="sportsButton">Sports</button>
-            <img src="sports.jpg" class = "categoryImg">
+    <div id="categoryScreen">
+        <p style="margin-left: 15px;">
+            Select a mode to begin!<br>
+        </p>
+        <div id="categoryButtons">
+            <div class="categoryCard" id="sportsCard">
+                <button id="sportsButton">Sports</button>
+                <img src="sports.jpg" class="categoryImg">
+            </div>
+            <div class="categoryCard" id="mathCard">
+                <button id="mathButton">Math</button>
+                <img src="math.jpg" class="categoryImg">
+            </div>
+            <div class="categoryCard" id="musicCard">
+                <button id="musicButton">Music</button>
+                <img src="music.jpg" class="categoryImg">
+            </div>
+            <div class="categoryCard" id="movieCard">
+                <button id="movieButton">Movies</button>
+                <img src="movies.jpg" class="categoryImg">
+            </div>
+            <div class="categoryCard" id="scienceCard">
+                <button id="scienceButton">Science</button>
+                <img src="science.jpg" class="categoryImg">
+            </div>
+            <div class="categoryCard" id="historyCard">
+                <button id="historyButton">History</button>
+                <img src="history.jpg" class="categoryImg">
+            </div>
+            <div class="categoryCard" id="videogamesCard">
+                <button id="videogamesButton">Video Games</button>
+                <img src="videogames.jpg" class="categoryImg">
+            </div>
+            <div class="categoryCard" id="animalsCard">
+                <button id="animalsButton">Animals</button>
+                <img src="animals.jpg" class="categoryImg">
+            </div>
         </div>
-        <div class = "categoryCard" id = "mathCard">
-            <button id="mathButton">Math</button>
-            <img src="math.jpg" class = "categoryImg">
-        </div>
-        <div class = "categoryCard" id = "musicCard">
-            <button id="musicButton">Music</button>
-            <img src="music.jpg" class = "categoryImg">
-        </div>
-        <div class = "categoryCard" id = "movieCard">
-            <button id="movieButton">Movies</button>
-            <img src="movies.jpg" class = "categoryImg">
-        </div>
-        <div class = "categoryCard" id = "scienceCard">
-            <button id="scienceButton">Science</button>
-            <img src="science.jpg" class = "categoryImg">
-        </div>
-        <div class = "categoryCard" id = "historyCard">
-            <button id="historyButton">History</button>
-            <img src="history.jpg" class = "categoryImg">
-        </div>
-        <div class = "categoryCard" id = "videogamesCard">
-            <button id="videogamesButton">Video Games</button>
-            <img src="videogames.jpg" class = "categoryImg">
-        </div>
-        <div class = "categoryCard" id = "animalsCard">
-            <button id="animalsButton">Animals</button>
-            <img src="animals.jpg" class = "categoryImg">
-        </div>
-    </div>
     </div>
 
     <!-- start screen -->
-    <div id = "startScreen">
-        <p style="text-align: center;" id = "selectedModeText">You selected: </p>
+    <div id="startScreen">
+        <p style="text-align: center;" id="selectedModeText">You selected: </p>
         <button id="startButton">Start Quiz</button>
     </div>
 
     <!-- quiz screen -->
-    <div id = "quizScreen">
+    <div id="quizScreen">
         <div class="myBox">
-            <h2> Question </h2>
-            <p id="score">Questions answered: 0/10</p>
+            <h2>Question</h2>
+            <p id="score">Question 1/10  •  Score: 0</p>
             <p class="question" id="questionText">
                 Click start to begin the quiz!
             </p>
         </div>
+
+        <!-- Timer bar -->
+        <div id="timerWrapper">
+            <span id="timerDisplay">10s</span>
+            <div id="timerTrack">
+                <div id="timerBar"></div>
+            </div>
+        </div>
+
         <div id="choicesContainer"></div>
         <div id="resultsContainer"></div>
     </div>
