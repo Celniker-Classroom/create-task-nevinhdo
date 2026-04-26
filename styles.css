@@ -1,63 +1,81 @@
-    /* Add Global styles here */
-    .question{
-        font-family: Arial, 'Courier New', Courier, monospace;
-        font-size: 20px;
-        color: #000000;
-        margin-top: 14px;
-    }
+.question {
+    font-family: Arial, 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 14px;
+}
 
-    body h1 {
-        font-family: Arial, sans-serif;
-        font-size: 36px;
-        color: #000000;
-        margin-left: 15px;
-    }
+body h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    color: #000000;
+    margin-left: 15px;
+}
 
-    body h2 {
-        font-family: 'Times New Roman', serif;
-        font-size: 28px;
-        color: #000000;
-        margin-left: 15px;
-        margin-top: 10px;
-    }
+body h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    color: #000000;
+    margin-left: 15px;
+    margin-top: 10px;
+}
 
-    body p {
-        font-family: 'Arial', sans-serif;
-        font-size: 18px;
-        color: #000000;
-        margin-left: 15px;
-        margin-top: 20px;
-    }
+body p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    margin-left: 15px;
+    margin-top: 20px;
+}
 
+.myBox {
+    width: 30cm;
+    height: 4cm;
+    border: 2px solid #000000;
+    padding: 20px;
+    margin: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 30px;
+}
 
-    .myBox {
-        width: 30cm;
-        height: 4cm;
-        border: 2px solid #000000;
-        padding: 20px;
-        margin: 15px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        margin-top: 30px;
-    }
+.myBox h2 {
+    letter-spacing: normal;
+    margin-top: 0;
+}
 
-    .myBox h2 {
-        letter-spacing: normal;
-        margin-top: 0;
-    }
+#startButton {
+    margin-top: 20px;
+    margin-left: 15px;
+}
 
-    #guessButton {
-        align-items: left;
-        margin-left: 15px;
-        margin-top: 10px;
-    }
+#choicesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 15px;
+    margin-top: 20px;
+    max-width: 600px;
+}
 
-    #myInput {
-        width: 150px;
-    }
+.choiceBtn {
+    padding: 20px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    min-height: 80px;
+    transition: transform 0.1s, opacity 0.1s;
+}
 
+.choiceBtn:hover {
+    opacity: 0.85;
+    transform: scale(1.03);
+}
 
-    #startButton {
-        margin-top: 20px;
-        margin-left: 15px;
-    }
+.choiceBtn:active {
+    transform: scale(0.97);
+}
