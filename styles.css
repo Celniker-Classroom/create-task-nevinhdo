@@ -1,42 +1,64 @@
-.question{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    color: #000000;
+    margin: 20px 0 10px 0;
+}
+
+h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 42px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.question {
     font-family: Arial, 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 32px;
     color: #000000;
     margin-top: 14px;
 }
 
-body h1 {
-    font-family: Arial, sans-serif;
-    font-size: 36px;
-    color: #000000;
-    margin-left: 15px;
+#score {
+    font-size: 26px;
 }
 
-body h2 {
-    font-family: 'Times New Roman', serif;
-    font-size: 28px;
-    color: #000000;
-    margin-left: 15px;
-    margin-top: 10px;
-}
-
-body p {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    color: #000000;
-    margin-left: 15px;
-    margin-top: 20px;
+#quizScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .myBox {
-    width: 30cm;
-    height: 4cm;
+    width: 80%;
+    height: auto;
     border: 2px solid #000000;
-    padding: 20px;
-    margin: 15px;
+    padding: 40px;
+    margin: 20px auto 15px auto;
     background-color: #f9f9f9;
     border-radius: 8px;
-    margin-top: 30px;
+    text-align: center;
 }
 
 .myBox h2 {
@@ -46,9 +68,8 @@ body p {
 
 #startButton {
     margin-top: 20px;
-    margin-left: 15px;
-    padding: 12px 30px;
-    font-size: 18px;
+    padding: 18px 40px;
+    font-size: 26px;
     cursor: pointer;
     border-radius: 8px;
     border: none;
@@ -66,24 +87,25 @@ body p {
 #choicesContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin: 15px;
-    margin-top: 20px;
-    max-width: 600px;
+    gap: 16px;
+    margin: 16px auto;
+    width: 80%;
 }
 
 .choiceBtn {
-    padding: 20px;
-    font-size: 18px;
+    padding: 30px;
+    font-size: 26px;
     font-family: Arial, sans-serif;
     font-weight: bold;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    min-height: 80px;
-    transition: transform 0.1s, opacity 0.1s;
+    min-height: 120px;
+    width: 100%;
+    text-align: center;
 }
+
 
 .choiceBtn:hover {
     opacity: 0.85;
@@ -95,12 +117,16 @@ body p {
 }
 
 /* category screen */
+#categoryScreen {
+    width: 95%;
+}
+
 #categoryButtons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin: 15px;
-    margin-top: 10px;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
 }
 
 .categoryCard {
@@ -111,6 +137,7 @@ body p {
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.1s;
+    width: 100%;
 }
 
 .categoryCard:hover {
@@ -130,7 +157,7 @@ body p {
 
 .categoryImg {
     width: 100%;
-    height: 360px;
+    height: 160px;
     object-fit: cover;
     display: block;
 }
@@ -142,7 +169,70 @@ body p {
 #scienceCard button     { background-color: #2a9d8f; }
 #historyCard button     { background-color: #e9c46a; color: #333; }
 #videogamesCard button  { background-color: #f77f00; }
+#animalsCard button     { background-color: #4a7c59; }
+
+/* results */
+#resultsContainer {
+    text-align: center;
+    width: 80%;
+    margin: 15px auto;
+}
+
+.resultBox {
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.resultBox.correct {
+    background-color: #2a9d8f;
+}
+
+.resultBox.incorrect {
+    background-color: #e63946;
+}
+
+.resultQuestion {
+    font-size: 20px;
+    opacity: 0.9;
+    margin: 0;
+    color: white;
+}
+
+.resultAnswer {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 6px 0 0 0;
+    color: white;
+}
+
+.resultCorrect {
+    font-size: 20px;
+    margin: 4px 0 0 0;
+    color: white;
+}
 
 /* hiding screens */
 #startScreen { display: none; }
 #quizScreen  { display: none; }
+
+
+.playAgainBtn {
+    margin-top: 20px;
+    padding: 18px 40px;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    width: 100%;
+}
+
+.playAgainBtn:hover {
+    opacity: 0.85;
+    transform: scale(1.03);
+}

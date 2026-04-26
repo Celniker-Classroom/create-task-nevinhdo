@@ -18,7 +18,7 @@ const movieAnswerlist = ["Leonardo DiCaprio", "Hogwarts", "Mufasa", "Red pill", 
 const movieChoiceslist = [["Leonardo DiCaprio", "Brad Pitt", "Johnny Depp", "Tom Cruise"], ["Hogwarts", "Durmstrang", "Beauxbatons", "Ravenhall"], ["Mufasa", "Scar", "Ahadi", "Zazu"], ["Red pill", "Blue pill", "Green pill", "Black pill"], ["Steven Spielberg", "James Cameron", "Christopher Nolan", "George Lucas"], ["Life is like a rollercoaster.", "Life is like a box of chocolates.", "Life is what you bake it.", "Life is just a dream."], ["Titanic", "Avatar", "The Wolf of Wall Street", "Cast Away"], ["Batman", "Iron Man", "Spider-Man", "Black Panther"], ["Toy Story", "Cars", "Shrek", "Monsters, Inc."], ["Anna", "Elsa", "Rapunzel", "Kristoff"], ["Quentin Tarantino", "Martin Scorsese", "Guy Ritchie", "Ridley Scott"], ["1975", "1977", "1980", "1983"]];
 
 //sports lists
-const sportsQuestionlist = ["Who won the most recent NBA championship (2024 season)?", "Who won the 2022 FIFA World Cup?", "Which NFL team has the most Super Bowl wins?", "Who holds the 100m world record?", "Which country has won the most Olympic gold medals historically?", "How many points is a 3-pointer worth in basketball?", "How many players are on the field per soccer team?", "How many points is a touchdown worth?", "How many meters is one lap around a standard outdoor track?", "Who has the most Olympic gold medals of all time?", "Which player is known as 'King James'?", "Which player is widely known as 'CR7'?", "What position usually throws the ball in football?", "What event measures explosive horizontal jumping distance?", "In which city were the 2016 Summer Olympics held?", "Which NBA player is known for 'Splash Brothers' with Klay Thompson?", "What country is Lionel Messi from?", "How many downs does a team get to advance 10 yards?", "Which event involves jumping over a bar using a pole?", "What symbol represents the Olympic Games?"];
+const sportsQuestionlist = ["Who won the 2023-2024 NBA championship?", "Who won the 2022 FIFA World Cup?", "Which NFL team has the most Super Bowl wins?", "Who holds the 100m world record?", "Which country has won the most Olympic gold medals historically?", "How many points is a 3-pointer worth in basketball?", "How many players are on the field per soccer team?", "How many points is a touchdown worth?", "How many meters is one lap around a standard outdoor track?", "Who has the most Olympic gold medals of all time?", "Which player is known as 'King James'?", "Which player is widely known as 'CR7'?", "What position usually throws the ball in football?", "What event measures explosive horizontal jumping distance?", "In which city were the 2016 Summer Olympics held?", "Which NBA player is known for 'Splash Brothers' with Klay Thompson?", "What country is Lionel Messi from?", "How many downs does a team get to advance 10 yards in American Football?", "Which event involves jumping over a bar using a pole?", "What symbol represents the Olympic Games?"];
 const sportsAnswerlist = ["Boston Celtics", "Argentina", "New England Patriots", "Usain Bolt", "United States", "3", "11", "6", "400m", "Michael Phelps", "LeBron James", "Cristiano Ronaldo", "Quarterback", "Long Jump", "Rio de Janeiro", "Stephen Curry", "Argentina", "4", "Pole Vault", "Rings"];
 const sportsChoiceslist = [["Boston Celtics", "Golden State Warriors", "Denver Nuggets", "Miami Heat"], ["Argentina", "France", "Brazil", "Germany"], ["New England Patriots", "Kansas City Chiefs", "Green Bay Packers", "Chicago Bears"], ["Usain Bolt", "Tyson Gay", "Noah Lyles", "Asafa Powell"], ["United States", "China", "Russia", "United Kingdom"], ["1", "2", "3", "4"], ["9", "10", "11", "12"], ["3", "6", "7", "8"], ["200m", "300m", "400m", "500m"], ["Michael Phelps", "Usain Bolt", "Simone Biles", "Carl Lewis"], ["LeBron James", "Kevin Durant", "Stephen Curry", "Kawhi Leonard"], ["Cristiano Ronaldo", "Lionel Messi", "Neymar", "Kylian Mbappé"], ["Running Back", "Quarterback", "Wide Receiver", "Linebacker"], ["High Jump", "Long Jump", "Pole Vault", "Triple Jump"], ["Rio de Janeiro", "Tokyo", "London", "Beijing"], ["Stephen Curry", "Damian Lillard", "James Harden", "Russell Westbrook"], ["Brazil", "Argentina", "Spain", "Portugal"], ["3", "4", "5", "6"], ["High Jump", "Long Jump", "Pole Vault", "Hurdles"], ["Star", "Flame", "Rings", "Shield"]];
 
@@ -37,6 +37,11 @@ const videogamesQuestionlist = ["Which company created Mario?", "What is the bes
 const videogamesAnswerlist = ["Nintendo", "Minecraft", "Luigi", "Call of Duty", "Link", "Sony", "Minecraft", "Peach", "Fortnite", "Robux", "Mario", "Halo", "Hedgehog", "Microsoft", "Be the last player alive", "Minecraft", "Player character (Trainer)", "Call of Duty Warzone", "Control and simulate life", "Game Freak"];
 const videogamesChoiceslist = [["Nintendo", "Sony", "Microsoft", "Sega"], ["Minecraft", "Grand Theft Auto V", "Tetris", "Wii Sports"], ["Wario", "Luigi", "Toad", "Bowser"], ["Call of Duty", "Fortnite", "Apex Legends", "PUBG"], ["Zelda", "Link", "Ganon", "Epona"], ["Sony", "Nintendo", "Microsoft", "Atari"], ["Minecraft", "Roblox", "Terraria", "Fortnite"], ["Daisy", "Peach", "Rosalina", "Zelda"], ["Fortnite", "PUBG", "Apex Legends", "Call of Duty"], ["Coins", "Credits", "Robux", "Gems"], ["Luigi", "Mario", "Waluigi", "Bowser"], ["Halo", "Destiny", "Call of Duty", "Titanfall"], ["Fox", "Hedgehog", "Porcupine", "Cat"], ["Microsoft", "Sony", "Nintendo", "Valve"], ["Build cities", "Collect coins", "Be the last player alive", "Complete puzzles"], ["Terraria", "Minecraft", "Stardew Valley", "The Sims"], ["Ash", "Red", "Player character (Trainer)", "Pikachu"], ["Call of Duty Warzone", "Fortnite", "PUBG", "Apex Legends"], ["Win wars", "Build cities", "Control and simulate life", "Solve mysteries"], ["Nintendo", "Game Freak", "Sony", "Ubisoft"]];
 
+//animals lists
+const animalsQuestionlist = ["What is the largest species of shark in the world?", "Which mammal is known to have the strongest bite force?", "What is a group of crows called?", "Which animal has the longest migration of any mammal?", "What is the only mammal capable of true flight?", "Which big cat is the fastest land animal?", "What is a group of lions called?", "Which animal has the largest brain relative to body size?", "What is the largest living land animal?", "Which bird is known for mimicking human speech best?", "What is the fastest bird in the world?", "Which ocean animal has three hearts?", "What is the only continent where giraffes live in the wild?", "Which animal sleeps the most per day on average?", "What is the name of a baby kangaroo?", "Which animal has the longest lifespan among commonly known animals?", "What is the only venomous primate?"];
+const animalsAnswerlist = ["Whale Shark", "Hippo", "Murder", "Caribou (Reindeer)", "Bat", "Cheetah", "Pride", "Human", "African Elephant", "Parrot", "Peregrine Falcon", "Octopus", "Africa", "Koala", "Joey", "Bowhead Whale", "Slow Loris"];
+const animalsChoiceslist = [["Great White Shark", "Tiger Shark", "Whale Shark", "Hammerhead Shark"], ["Lion", "Crocodile", "Hyena", "Hippo"], ["Pack", "Murder", "Herd", "Flock"], ["Elephant", "Whale", "Caribou (Reindeer)", "Zebra"], ["Flying squirrel", "Bat", "Sugar glider", "Pterosaur"], ["Lion", "Cheetah", "Leopard", "Tiger"], ["Pack", "Pride", "Herd", "Troop"], ["Elephant", "Human", "Dolphin", "Whale"], ["White Rhino", "Hippopotamus", "African Elephant", "Giraffe"], ["Crow", "Parrot", "Eagle", "Owl"], ["Eagle", "Peregrine Falcon", "Ostrich", "Hawk"], ["Shark", "Octopus", "Dolphin", "Jellyfish"], ["Asia", "Africa", "South America", "Australia"], ["Koala", "Sloth", "Cat", "Bat"], ["Pup", "Calf", "Joey", "Cub"], ["Elephant", "Bowhead Whale", "Tortoise", "Parrot"], ["Lemur", "Slow Loris", "Monkey", "Gorilla"]];
+
 let usedQuestions = [];
 let gameStage = "beginning";
 let gameMode = "math";
@@ -52,6 +57,20 @@ function shuffle(array) {
     }
     return array;
 }
+
+
+//load animals mode
+document.getElementById("animalsButton").addEventListener("click", function() {
+    gameMode = "animals";
+    gameStage = "waiting";
+    showStartScreen();
+});
+
+document.getElementById("animalsCard").addEventListener("click", function() {
+    gameMode = "animals";
+    gameStage = "waiting";
+    showStartScreen();
+});
 
 //load sports mode
 document.getElementById("sportsButton").addEventListener("click", function() {
@@ -171,10 +190,9 @@ document.getElementById("startButton").addEventListener("click", function() {
 //loading questions
 function loadQuestion() {
     if (gameStage === "playing") {
-
-        let questionlist = gameMode === "math" ? mathQuestionlist : gameMode === "music" ? musicQuestionlist : gameMode === "movies" ? movieQuestionlist : gameMode === "sports" ? sportsQuestionlist : gameMode === "science" ? scienceQuestionlist : gameMode === "history" ? historyQuestionlist : videogamesQuestionlist;
-        let choiceslist = gameMode === "math" ? mathChoiceslist : gameMode === "music" ? musicChoiceslist : gameMode === "movies" ? movieChoiceslist : gameMode === "sports" ? sportsChoiceslist : gameMode === "science" ? scienceChoiceslist : gameMode === "history" ? historyChoiceslist : videogamesChoiceslist;
-
+    let questionlist = gameMode === "math" ? mathQuestionlist : gameMode === "music" ? musicQuestionlist : gameMode === "movies" ? movieQuestionlist : gameMode === "sports" ? sportsQuestionlist : gameMode === "science" ? scienceQuestionlist : gameMode === "history" ? historyQuestionlist : gameMode === "animals" ? animalsQuestionlist : videogamesQuestionlist;
+    let choiceslist = gameMode === "math" ? mathChoiceslist : gameMode === "music" ? musicChoiceslist : gameMode === "movies" ? movieChoiceslist : gameMode === "sports" ? sportsChoiceslist : gameMode === "science" ? scienceChoiceslist : gameMode === "history" ? historyChoiceslist : gameMode === "animals" ? animalsChoiceslist : videogamesChoiceslist;
+    let answerlist = gameMode === "math" ? mathAnswerlist : gameMode === "music" ? musicAnswerlist : gameMode === "movies" ? movieAnswerlist : gameMode === "sports" ? sportsAnswerlist : gameMode === "science" ? scienceAnswerlist : gameMode === "history" ? historyAnswerlist : gameMode === "animals" ? animalsAnswerlist : videogamesAnswerlist;
         if (questionCount < 10) {
             let randIndex = Math.floor(Math.random() * questionlist.length);
             while (usedQuestions.includes(randIndex)) {
@@ -207,9 +225,10 @@ function checkAnswer(userAnswer) {
     questionCount++;
     if (questionCount >= 10) {
         const finalScore = checkAll(userAnswers);
-        document.getElementById("score").innerText = "Final Score: " + finalScore + "/10";
+        document.getElementById("score").innerHTML = "Final Score: " + finalScore + "/10" + "<br> <br> Scroll to the bottom to play again!";
         document.getElementById("questionText").innerText = "Quiz Complete!";
-        document.getElementById("choicesContainer").innerHTML = "";
+        document.getElementById("questionText").style.display = "none";
+        document.getElementById("choicesContainer").style.display = "none";
     } else {
         document.getElementById("score").innerText = "Questions answered: " + questionCount + "/10";
         loadQuestion();
@@ -218,13 +237,75 @@ function checkAnswer(userAnswer) {
 
 
 //checking all answers at the end
+//checking all answers at the end
 function checkAll(answers) {
-    let answerlist = gameMode === "math" ? mathAnswerlist : gameMode === "music" ? musicAnswerlist : gameMode === "movies" ? movieAnswerlist : gameMode === "sports" ? sportsAnswerlist : gameMode === "science" ? scienceAnswerlist : gameMode === "history" ? historyAnswerlist : videogamesAnswerlist;
+    let answerlist = gameMode === "math" ? mathAnswerlist : gameMode === "music" ? musicAnswerlist : gameMode === "movies" ? movieAnswerlist : gameMode === "sports" ? sportsAnswerlist : gameMode === "science" ? scienceAnswerlist : gameMode === "history" ? historyAnswerlist : gameMode === "animals" ? animalsAnswerlist : videogamesAnswerlist;
+    let questionlist = gameMode === "math" ? mathQuestionlist : gameMode === "music" ? musicQuestionlist : gameMode === "movies" ? movieQuestionlist : gameMode === "sports" ? sportsQuestionlist : gameMode === "science" ? scienceQuestionlist : gameMode === "history" ? historyQuestionlist : gameMode === "animals" ? animalsQuestionlist : videogamesQuestionlist;
     let correct = 0;
+
+    //clear old results
+    let container = document.getElementById("resultsContainer");
+    container.innerHTML = "";
+    container.style.display = "block";
+
+    //build result boxes
     for (let i = 0; i < answers.length; i++) {
-        if (answers[i] === answerlist[correspondingAnswer[i]]) {
-            correct++;
+        let isCorrect = answers[i] === answerlist[correspondingAnswer[i]];
+        if (isCorrect) correct++;
+
+        //create the box
+        let box = document.createElement("div");
+        box.className = isCorrect ? "resultBox correct" : "resultBox incorrect";
+
+        //question text
+        let questionText = document.createElement("p");
+        questionText.className = "resultQuestion";
+        questionText.innerText = questionlist[correspondingAnswer[i]];
+
+        //your answer
+        let yourAnswer = document.createElement("p");
+        yourAnswer.className = "resultAnswer";
+        yourAnswer.innerText = (isCorrect ? "✓ " : "X ") + "Your answer: " + answers[i];
+
+        box.appendChild(questionText);
+        box.appendChild(yourAnswer);
+
+        //correct answer if wrong
+        if (!isCorrect) {
+            let correctAnswer = document.createElement("p");
+            correctAnswer.className = "resultCorrect";
+            correctAnswer.innerText = "Correct answer: " + answerlist[correspondingAnswer[i]];
+            box.appendChild(correctAnswer);
         }
+
+        container.appendChild(box);
     }
+
+//play again button
+let playAgainBtn = document.createElement("button");
+playAgainBtn.innerText = "Play Again";
+playAgainBtn.className = "playAgainBtn";
+playAgainBtn.addEventListener("click", function() {
+    //reset everything
+    questionCount = 0;
+    userAnswers = [];
+    correspondingAnswer = [];
+    usedQuestions = [];
+    gameStage = "beginning";
+
+    //reset question box
+    document.getElementById("questionText").style.display = "block";
+    document.getElementById("choicesContainer").style.display = "grid";
+    document.getElementById("resultsContainer").innerHTML = "";
+    document.getElementById("resultsContainer").style.display = "none";
+    document.getElementById("score").innerText = "Questions answered: 0/10";
+
+    //go back to category screen
+    document.getElementById("categoryScreen").style.display = "block";
+    document.getElementById("startScreen").style.display = "none";
+    document.getElementById("quizScreen").style.display = "none";
+});
+container.appendChild(playAgainBtn);
+
     return correct;
 }

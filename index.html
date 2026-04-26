@@ -11,50 +11,54 @@
 
 
 <body>
-    <h1>
+    <h1 style="margin-bottom: 2cm;">
         Quiz Game</h1>
 
     <!-- category select screen -->
     <div id = "categoryScreen">
-    <p>
+    <p style="margin-left: 15px;">
         Select a mode to begin!
     <br>
     </p>
-<div id = "categoryButtons">
-    <div class = "categoryCard" id = "sportsCard">
-        <button id="sportsButton">Sports</button>
-        <img src="sports.jpg" class = "categoryImg">
+    <div id = "categoryButtons">
+        <div class = "categoryCard" id = "sportsCard">
+            <button id="sportsButton">Sports</button>
+            <img src="sports.jpg" class = "categoryImg">
+        </div>
+        <div class = "categoryCard" id = "mathCard">
+            <button id="mathButton">Math</button>
+            <img src="math.jpg" class = "categoryImg">
+        </div>
+        <div class = "categoryCard" id = "musicCard">
+            <button id="musicButton">Music</button>
+            <img src="music.jpg" class = "categoryImg">
+        </div>
+        <div class = "categoryCard" id = "movieCard">
+            <button id="movieButton">Movies</button>
+            <img src="movies.jpg" class = "categoryImg">
+        </div>
+        <div class = "categoryCard" id = "scienceCard">
+            <button id="scienceButton">Science</button>
+            <img src="science.jpg" class = "categoryImg">
+        </div>
+        <div class = "categoryCard" id = "historyCard">
+            <button id="historyButton">History</button>
+            <img src="history.jpg" class = "categoryImg">
+        </div>
+        <div class = "categoryCard" id = "videogamesCard">
+            <button id="videogamesButton">Video Games</button>
+            <img src="videogames.jpg" class = "categoryImg">
+        </div>
+        <div class = "categoryCard" id = "animalsCard">
+            <button id="animalsButton">Animals</button>
+            <img src="animals.jpg" class = "categoryImg">
+        </div>
     </div>
-    <div class = "categoryCard" id = "mathCard">
-        <button id="mathButton">Math</button>
-        <img src="math.jpg" class = "categoryImg">
-    </div>
-    <div class = "categoryCard" id = "musicCard">
-        <button id="musicButton">Music</button>
-        <img src="music.jpg" class = "categoryImg">
-    </div>
-    <div class = "categoryCard" id = "movieCard">
-        <button id="movieButton">Movies</button>
-        <img src="movies.jpg" class = "categoryImg">
-    </div>
-    <div class = "categoryCard" id = "scienceCard">
-        <button id="scienceButton">Science</button>
-        <img src="science.jpg" class = "categoryImg">
-    </div>
-    <div class = "categoryCard" id = "historyCard">
-        <button id="historyButton">History</button>
-        <img src="history.jpg" class = "categoryImg">
-    </div>
-    <div class = "categoryCard" id = "videogamesCard">
-        <button id="videogamesButton">Video Games</button>
-        <img src="videogames.jpg" class = "categoryImg">
-    </div>
-</div>
     </div>
 
     <!-- start screen -->
     <div id = "startScreen">
-        <p id = "selectedModeText">You selected: </p>
+        <p style="text-align: center;" id = "selectedModeText">You selected: </p>
         <button id="startButton">Start Quiz</button>
     </div>
 
@@ -68,6 +72,7 @@
             </p>
         </div>
         <div id="choicesContainer"></div>
+        <div id="resultsContainer"></div>
     </div>
 
 </body>
