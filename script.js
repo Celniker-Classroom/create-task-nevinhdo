@@ -27,38 +27,52 @@ let gameStage = "beginning";
 let gameMode = "math";
 console.log("Game Stage: " + gameStage);
 
-const colors = ["#e63946", "#2a9d8f", "#e9c46a", "#457b9d"];
+const choiceColors = ["#e63946", "#2a9d8f", "#e9c46a", "#457b9d"];
 
-//disable start button at beginning
-document.getElementById("startButton").disabled = true;
+//shuffle array
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 //load sports mode
 document.getElementById("sportsButton").addEventListener("click", function() {
     gameMode = "sports";
     gameStage = "waiting";
-    document.getElementById("startButton").disabled = false;
+    showStartScreen();
 });
 
 //load music mode
 document.getElementById("musicButton").addEventListener("click", function() {
     gameMode = "music";
     gameStage = "waiting";
-    document.getElementById("startButton").disabled = false;
+    showStartScreen();
 });
 
 //load movies mode
 document.getElementById("movieButton").addEventListener("click", function() {
     gameMode = "movies";
     gameStage = "waiting";
-    document.getElementById("startButton").disabled = false;
+    showStartScreen();
 });
 
 //load math mode
 document.getElementById("mathButton").addEventListener("click", function() {
     gameMode = "math";
     gameStage = "waiting";
-    document.getElementById("startButton").disabled = false;
+    showStartScreen();
 });
+
+//show start screen, hide category screen
+function showStartScreen() {
+    document.getElementById("categoryScreen").style.display = "none";
+    document.getElementById("startScreen").style.display = "block";
+    document.getElementById("quizScreen").style.display = "none";
+    document.getElementById("selectedModeText").innerText = "You selected: " + gameMode.charAt(0).toUpperCase() + gameMode.slice(1);
+}
 
 //wait until start button is pressed
 document.getElementById("startButton").addEventListener("click", function() {
@@ -68,6 +82,9 @@ document.getElementById("startButton").addEventListener("click", function() {
     userAnswers = [];
     correspondingAnswer = [];
     usedQuestions = [];
+    document.getElementById("categoryScreen").style.display = "none";
+    document.getElementById("startScreen").style.display = "none";
+    document.getElementById("quizScreen").style.display = "block";
     loadQuestion();
 });
 
@@ -79,7 +96,7 @@ function loadQuestion() {
         let questionlist = gameMode === "math" ? mathQuestionlist : gameMode === "music" ? musicQuestionlist : gameMode === "movies" ? movieQuestionlist : sportsQuestionlist;
         let choiceslist = gameMode === "math" ? mathChoiceslist : gameMode === "music" ? musicChoiceslist : gameMode === "movies" ? movieChoiceslist : sportsChoiceslist;
 
-        if (questionCount < 4) {
+        if (questionCount < 10) {
             let randIndex = Math.floor(Math.random() * questionlist.length);
             while (usedQuestions.includes(randIndex)) {
                 randIndex = Math.floor(Math.random() * questionlist.length);
@@ -88,13 +105,13 @@ function loadQuestion() {
             correspondingAnswer.push(randIndex);
             document.getElementById("questionText").innerText = questionlist[randIndex];
 
-            let choices = choiceslist[randIndex];
-            document.getElementById("choicesContainer").innerHTML = "";
+             let choices = shuffle([...choiceslist[randIndex]]);
+                document.getElementById("choicesContainer").innerHTML = "";
             for (let i = 0; i < choices.length; i++) {
                 let btn = document.createElement("button");
                 btn.innerText = choices[i];
                 btn.className = "choiceBtn";
-                btn.style.backgroundColor = colors[i];
+                btn.style.backgroundColor = choiceColors[i];
                 btn.addEventListener("click", function() {
                     checkAnswer(choices[i]);
                 });
@@ -109,13 +126,13 @@ function loadQuestion() {
 function checkAnswer(userAnswer) {
     userAnswers.push(userAnswer);
     questionCount++;
-    if (questionCount >= 4) {
+    if (questionCount >= 10) {
         const finalScore = checkAll(userAnswers);
-        document.getElementById("score").innerText = "Final Score: " + finalScore + "/4";
+        document.getElementById("score").innerText = "Final Score: " + finalScore + "/10";
         document.getElementById("questionText").innerText = "Quiz Complete!";
         document.getElementById("choicesContainer").innerHTML = "";
     } else {
-        document.getElementById("score").innerText = "Questions answered: " + questionCount + "/4";
+        document.getElementById("score").innerText = "Questions answered: " + questionCount + "/10";
         loadQuestion();
     }
 }
@@ -132,3 +149,27 @@ function checkAll(answers) {
     }
     return correct;
 }
+
+document.getElementById("sportsCard").addEventListener("click", function() {
+    gameMode = "sports";
+    gameStage = "waiting";
+    showStartScreen();
+});
+
+document.getElementById("mathCard").addEventListener("click", function() {
+    gameMode = "math";
+    gameStage = "waiting";
+    showStartScreen();
+});
+
+document.getElementById("musicCard").addEventListener("click", function() {
+    gameMode = "music";
+    gameStage = "waiting";
+    showStartScreen();
+});
+
+document.getElementById("movieCard").addEventListener("click", function() {
+    gameMode = "movies";
+    gameStage = "waiting";
+    showStartScreen();
+});

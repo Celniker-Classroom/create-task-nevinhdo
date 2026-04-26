@@ -1,3 +1,4 @@
+<!-- quiz game with multiple choice questions -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,29 +13,49 @@
 <body>
     <h1>
         Quiz Game</h1>
+
+    <div id = "categoryScreen">
     <p>
         Select a mode to begin!
     <br>
-<div style = "display: flex; gap: 15px; margin-left: 15px;">
-    <button id="sportsButton">Sports</button>
-    <button id="mathButton">Math</button>
-    <button id="musicButton">Music</button>
-    <button id="movieButton">Movies</button>
+    </p>
+<div id = "categoryButtons">
+    <div class = "categoryCard" id = "sportsCard">
+        <button id="sportsButton">Sports</button>
+        <img src="ccatrack.jpg" class = "categoryImg">
+    </div>
+    <div class = "categoryCard" id = "mathCard">
+        <button id="mathButton">Math</button>
+        <img src="math.jpg" class = "categoryImg">
+    </div>
+    <div class = "categoryCard" id = "musicCard">
+        <button id="musicButton">Music</button>
+        <img src="music.jpg" class = "categoryImg">
+    </div>
+    <div class = "categoryCard" id = "movieCard">
+        <button id="movieButton">Movies</button>
+        <img src="movies.jpg" class = "categoryImg">
+    </div>
 </div>
-
-
-</p>
-    <button id="startButton">Start Quiz</button>
-
-    <div class="myBox">
-        <h2> Question </h2>
-        <p id="score">Questions answered: 0/4</p>
-        <p class="question" id="questionText">
-            Click start to begin the quiz!
-</p>
     </div>
 
-    <div id="choicesContainer"></div>
+    <!-- start screen -->
+    <div id = "startScreen">
+        <p id = "selectedModeText">You selected: </p>
+        <button id="startButton">Start Quiz</button>
+    </div>
+
+    <!-- quiz screen -->
+    <div id = "quizScreen">
+        <div class="myBox">
+            <h2> Question </h2>
+            <p id="score">Questions answered: 0/10</p>
+            <p class="question" id="questionText">
+                Click start to begin the quiz!
+            </p>
+        </div>
+        <div id="choicesContainer"></div>
+    </div>
 
 </body>
 </html>
