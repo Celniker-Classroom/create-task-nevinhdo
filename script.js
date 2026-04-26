@@ -51,7 +51,7 @@ let gameMode = "math";
 
 const choiceColors = ["#e63946", "#2a9d8f", "#e9c46a", "#457b9d"];
 
-// ── High Scores
+//this function is for the high scores. it uses the local storage so that when the user comes back to the game, they can see their previous high scores and try to beat them. it also checks if the current score is a new high score and updates it if necessary.
 function getHighScores() {
     try {
         return JSON.parse(localStorage.getItem("quizHighScores")) || {};
@@ -63,7 +63,7 @@ function saveHighScore(mode, score) {
     if (!scores[mode] || score > scores[mode]) {
         scores[mode] = score;
         localStorage.setItem("quizHighScores", JSON.stringify(scores));
-        return true; // new high score
+        return true; //this returns true if a new high score was set, which we can use to show a special message at the end of the quiz
     }
     return false;
 }
@@ -72,7 +72,7 @@ function getHighScore(mode) {
     return getHighScores()[mode] || 0;
 }
 
-//  Timer
+//  this function is for the timer. it starts a countdown from 10 seconds for each question and updates the display. if the timer runs out, it automatically checks the answer as incorrect.
 function startTimer() {
     timeLeft = TIME_PER_QUESTION;
     updateTimerDisplay();
@@ -96,11 +96,11 @@ function updateTimerDisplay() {
     if (!timerEl) return;
     timerEl.innerText = timeLeft + "s";
 
-    // Color shifts: green → yellow → red
+    // Color of the bar at the bottom chagnes
     const pct = timeLeft / TIME_PER_QUESTION;
     timerEl.style.color = pct > 0.5 ? "#2a9d8f" : pct > 0.25 ? "#e9c46a" : "#e63946";
 
-    // Shrink the timer bar
+    // The bar shrinking as time increases
     const bar = document.getElementById("timerBar");
     if (bar) {
         bar.style.width = (pct * 100) + "%";
@@ -108,13 +108,13 @@ function updateTimerDisplay() {
     }
 }
 
-// Calculate points
+// Calculates points based on time used. Faster answers earn more points, with a minimum of 10 points for a correct answer and a maximum of 100 points for an instant answer.
 function calcPoints(timeUsed) {
     const pts = Math.round(MAX_POINTS - ((MAX_POINTS - 10) / TIME_PER_QUESTION) * timeUsed);
     return Math.max(10, Math.min(MAX_POINTS, pts));
 }
 
-// ── Shuffle
+// shuffles the choices for each question so that the correct answer isn't always in the same position
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -172,7 +172,7 @@ function getList(type) {
     }
 }
 
-// cateogries
+// creates the event listeners for the category buttons on the start screen. when a button is clicked, it sets the game mode and shows the start screen for that mode.
 ["sports","math","music","movie","science","history","videogames","animals"].forEach(id => {
     const modeKey = id === "movie" ? "movies" : id;
 
@@ -202,10 +202,10 @@ function showStartScreen() {
         hsEl.style.marginTop = "8px";
         document.getElementById("startScreen").insertBefore(hsEl, document.getElementById("startButton"));
     }
-    hsEl.innerText = hs > 0 ? "🏆 High Score: " + hs + " pts" : "No high score yet — be the first!";
+    hsEl.innerText = hs > 0 ? " High Score: " + hs + " pts" : "No high score yet — be the first!";
 }
 
-// start
+// starts the quiz when the start button is clicked. it initializes all the necessary variables and loads the first question.
 document.getElementById("startButton").addEventListener("click", function() {
     if (gameStage !== "waiting") return;
     gameStage = "playing";
@@ -256,7 +256,7 @@ function loadQuestion() {
     }
 }
 
-// chekc asnwer
+// checks the answer when a choice is clicked or when time runs out. it calculates the points earned based on how quickly the user answered and updates the score. then it either loads the next question or ends the quiz if 10 questions have been answered.
 function checkAnswer(userAnswer) {
     stopTimer();
 
@@ -280,7 +280,7 @@ function checkAnswer(userAnswer) {
     }
 }
 
-// end quiz
+// ends the quiz and shows the final score, along with a breakdown of each question and answer. it also checks if the user achieved a new high score and displays that information. finally, it provides a button to play again, which resets all variables and shows the category selection screen.
 function endQuiz() {
     const isNewHigh = saveHighScore(gameMode, totalScore);
     const prevHigh  = getHighScore(gameMode);
@@ -295,7 +295,7 @@ function endQuiz() {
     // final score
     document.getElementById("score").innerHTML =
         "🎉 Final Score: <strong>" + totalScore + " / 1000</strong>" +
-        (isNewHigh ? " &nbsp;🏆 New High Score!" : " &nbsp;🏆 Best: " + prevHigh);
+        (isNewHigh ? " &nbsp; New High Score!" : " &nbsp; Best: " + prevHigh);
 
     // results
     let container = document.getElementById("resultsContainer");
@@ -337,7 +337,7 @@ function endQuiz() {
         container.appendChild(box);
     }
 
-    // play again
+    // play again button
     let playAgainBtn = document.createElement("button");
     playAgainBtn.innerText = "Play Again";
     playAgainBtn.className = "playAgainBtn";
