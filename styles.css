@@ -1,63 +1,63 @@
-/* Add Global styles here */
-.question{
-    font-family: Arial, 'Courier New', Courier, monospace;
-    font-size: 20px;
-    color: #000000;
-    margin-top: 14px;
-}
+    /* Add Global styles here */
+    .question{
+        font-family: Arial, 'Courier New', Courier, monospace;
+        font-size: 20px;
+        color: #000000;
+        margin-top: 14px;
+    }
 
-body h1 {
-    font-family: Arial, sans-serif;
-    font-size: 36px;
-    color: #000000;
-    margin-left: 15px;
-}
+    body h1 {
+        font-family: Arial, sans-serif;
+        font-size: 36px;
+        color: #000000;
+        margin-left: 15px;
+    }
 
-body h2 {
-    font-family: 'Times New Roman', serif;
-    font-size: 28px;
-    color: #000000;
-    margin-left: 15px;
-    margin-top: 10px;
-}
+    body h2 {
+        font-family: 'Times New Roman', serif;
+        font-size: 28px;
+        color: #000000;
+        margin-left: 15px;
+        margin-top: 10px;
+    }
 
-body p {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    color: #000000;
-    margin-left: 15px;
-    margin-top: 20px;
-}
-
-
-.myBox {
-    width: 30cm;
-    height: 4cm;
-    border: 2px solid #000000;
-    padding: 20px;
-    margin: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-top: 30px;
-}
-
-.myBox h2 {
-    letter-spacing: normal;
-    margin-top: 0;
-}
-
-#guessButton {
-    align-items: left;
-    margin-left: 15px;
-    margin-top: 10px;
-}
-
-#myInput {
-    width: 150px;
-}
+    body p {
+        font-family: 'Arial', sans-serif;
+        font-size: 18px;
+        color: #000000;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
 
 
-#startButton {
-    margin-top: 20px;
-    margin-left: 15px;
-}
+    .myBox {
+        width: 30cm;
+        height: 4cm;
+        border: 2px solid #000000;
+        padding: 20px;
+        margin: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+
+    .myBox h2 {
+        letter-spacing: normal;
+        margin-top: 0;
+    }
+
+    #guessButton {
+        align-items: left;
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+
+    #myInput {
+        width: 150px;
+    }
+
+
+    #startButton {
+        margin-top: 20px;
+        margin-left: 15px;
+    }
