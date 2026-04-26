@@ -96,11 +96,11 @@ body p {
 
 /* category screen */
 #categoryButtons {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    margin-left: 15px;
+    margin: 15px;
     margin-top: 10px;
-    flex-wrap: wrap;
 }
 
 .categoryCard {
@@ -109,7 +109,6 @@ body p {
     align-items: center;
     border-radius: 12px;
     overflow: hidden;
-    width: 180px;
     cursor: pointer;
     transition: transform 0.1s;
 }
@@ -120,8 +119,8 @@ body p {
 
 .categoryCard button {
     width: 100%;
-    padding: 14px 0;
-    font-size: 18px;
+    padding: 16px 0;
+    font-size: 22px;
     font-family: Arial, sans-serif;
     font-weight: bold;
     color: white;
@@ -130,16 +129,19 @@ body p {
 }
 
 .categoryImg {
-    width: 180px;
-    height: 120px;
+    width: 100%;
+    height: 360px;
     object-fit: cover;
     display: block;
 }
 
-#sportsCard button { background-color: #e63946; }
-#mathCard button   { background-color: #457b9d; }
-#musicCard button  { background-color: #6c757d; }
-#movieCard button  { background-color: #6a0dad; }
+#sportsCard button      { background-color: #e63946; }
+#mathCard button        { background-color: #457b9d; }
+#musicCard button       { background-color: #6c757d; }
+#movieCard button       { background-color: #6a0dad; }
+#scienceCard button     { background-color: #2a9d8f; }
+#historyCard button     { background-color: #e9c46a; color: #333; }
+#videogamesCard button  { background-color: #f77f00; }
 
 /* hiding screens */
 #startScreen { display: none; }
